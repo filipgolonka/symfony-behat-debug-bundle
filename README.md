@@ -1,0 +1,2 @@
+# Symfony Behat Debug Bundle
+
