@@ -1,0 +1,28 @@
+services:
+    behat_debug.formatter:
+        class: PhpSpec\Console\Formatter
+        arguments:
+            - true
+
+    behat_debug.differ:
+        class: PhpSpec\Formatter\Presenter\Differ\Differ
+        arguments:
+            -
+                - '@behat_debug.differ.engines.string'
+                - '@behat_debug.differ.engines.object'
+                - '@behat_debug.differ.engines.array'
+
+    behat_debug.differ.engines.string:
+        class: PhpSpec\Formatter\Presenter\Differ\StringEngine
+
+    behat_debug.differ.engines.array:
+        class: PhpSpec\Formatter\Presenter\Differ\ArrayEngine
+
+    behat_debug.differ.engines.object:
+        class: PhpSpec\Formatter\Presenter\Differ\ObjectEngine
+        arguments:
+            - '@behat_debug.differ.engines.object.exporter'
+            - '@behat_debug.differ.engines.string'
+
+    behat_debug.differ.engines.object.exporter:
+        class: SebastianBergmann\Exporter\Exporter
