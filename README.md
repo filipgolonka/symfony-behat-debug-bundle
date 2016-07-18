@@ -30,6 +30,14 @@ class AppKernel extends Kernel
 }
 ```
 
+* Import services configuration file to your application:
+
+```
+// app/config/services.yml
+imports:
+    - { resource: "@FilipGolonkaSymfonyBehatDebugBundle/Resources/config/services.yml" }
+```
+
 * Just use it in your behat contexts:
 
 ```
