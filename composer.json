@@ -9,7 +9,7 @@
     ],
     "keywords": ["BDD", "StoryBDD", "TDD", "feature", "specification", "debug", "behat", "symfony"],
     "require": {
-        "phpspec/phpspec": "^2.2|^3.0",
+        "phpspec/phpspec": "^2.2|^3.0|^4.0",
         "symfony/http-kernel": "^2.3|^3.0",
         "symfony/config": "^2.3|^3.0",
         "symfony/dependency-injection": "^2.3|^3.0"
